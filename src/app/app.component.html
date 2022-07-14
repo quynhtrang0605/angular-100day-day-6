@@ -1,4 +1,40 @@
 <hello name="{{ name }}"></hello>
-<p>
+
+
+<button (click)="isDanger = !isDanger">Toggle Danger</button>
+<br>
+<button (click)="isWarning = !isWarning">Toggle Warning</button>
+
+<!-- <div class="box" [class.red-border]="isDanger" [class.yellow-background]="isWarning"></div> -->
+
+<!-- <div class="box" [class]="['red-border', 'yellow-background']"></div> -->
+
+<!-- <div class="box" [class]="{'red-border': isDanger, 'yellow-background': isWarning}"></div> -->
+
+<div [class]="classes"></div>
+
+<!-- 
+  [class.ten-class]
+  [class]="array"
+  [class]="object" { [ten-class: string]: boolean}
+  [class]="variable"
+ -->
+
+ <!-- <p [style.color]="'red'" [style.background-color]="'black'" [style.fontSize.rem]="2">
+  Start editing to see some magic happen :)
+</p> -->
+
+ <!-- <p [style]="{color:'red', background: 'black', fontSize: '2rem'}">
+  Start editing to see some magic happen :)
+</p> -->
+
+<p [style.--text-color] = "isDanger ? 'red' : 'blue'" [style]="{color:'var(--text-color)', background: 'black', fontSize: '2rem'}">
   Start editing to see some magic happen :)
 </p>
+<!-- 
+  [style.tenStyle]
+  [style.ten-style]
+  [style.tenStyle.unit]
+  [style]="object"
+  [style.css-variable] // đặt biến
+ -->
